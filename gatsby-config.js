@@ -33,8 +33,8 @@ module.exports = {
         ],
         externalLinks: [
           {
-            name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
+            name: `Resume`,
+            url: `/resume`,
           },
           {
             name: `Homepage`,
@@ -141,6 +141,18 @@ module.exports = {
         analyzerMode: `static`,
         reportFilename: `_bundle.html`,
         openAnalyzer: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-global-styles`,
+      options: {
+        pathToConfigModule: `src/styles/GlobalStyleComponent`,
+        props: {
+          theme: `src/styles/theme`,
+          other: {
+            resume: false
+          }
+        }
       },
     },
   ].filter(Boolean),
