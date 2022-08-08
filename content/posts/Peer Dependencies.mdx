@@ -1,0 +1,89 @@
+---
+title: Peer Dependencies
+date: 2022-07-28
+---
+
+
+프로젝트에 대한 종속성은 프로젝트가 작동하는 데 필요한 다른 패키지에 정의된 기존 코드 세트입니다. package.json 파일 에 나열되어 있습니다. 패키지의 모든 종속성에는 필요한 최소 버전이 있어야 합니다.
+
+```
+{
+  "name": "my-project",
+  "dependencies": {
+    "package-a": "^1.0.0"
+  },
+  "devDependencies": {
+    "package-b": "^1.2.1"
+  },
+  "peerDependencies": {
+    "package-c": "^2.5.4"
+  },
+  "optionalDependencies": {
+    "package-d": "^3.1.0"
+  }
+}
+
+```
+
+Dependencies
+앱에 종속된 가장 일반적인 종속성이다. 런타임과 빌드타임, 개발중 모두에서 이 종속성 패키지들이 필요하기 때문에, 앱이 빌드 될 때 이 종속성 패키지들이 번들에 포함되어 배포된다.
+
+
+Dev Dependencies
+런타임에서는 필요하지 않고 빌드타임 & 개발중에만 필요한 패키지들이다. 빌드타임에서 이 종속성들은 빌드에 도움을 주거나 참조가 되지만, 번들에는 포함되지 않는 종속성 패키지들이다.
+
+devDependencies 는 개발 종속성입니다. 개발 워크플로의 어느 시점에서는 유용하지만 코드(예: Babel 또는 Flow)를 실행할 때는 필요하지 않습니다.
+
+Peer Dependencies
+이 글의 주인공인 피어 종속성이다. Peer 는 "동료" 라는 뜻을 가지고 있다. 어떤 상황에서 peer dependencies를 사용해야할까?
+
+실제로 패키지에서 직접 require(import) 하지는 않더라도 호환성이 필요한 경우 명시한다.
+
+피어 종속성은 고유한 패키지를 게시할 때만 사용하는 특수한 유형의 종속성입니다.
+
+피어 종속성이 있다는 것은 패키지에 필요한 종속성이 있음을 나타내며 이는 패키지를 설치하는 사람과 정확히 동일한 종속성입니다.
+
+
+```
+node_modules
+ㄴreact ^16.0.0 (dependancy)
+ㄴmy-ui-library ^0.0.1 (dependancy)
+  ㄴnode_modules
+    ㄴreact ^17.0.0 (peer dependancy)
+```
+
+
+여기서 react의 버전이 서로 다른 것을 확인할 수 있다. 이처럼 서로 버전이 다른 dependancy를 가지고 있다면, npm과 yarn은 서로 다른 방법으로 개발자에게 알려준다.
+
+
+yarn 의 경우
+아래와 같은 Warning 메시지를 보여준다.
+
+my-ui-library@0.0.1" has incorrect peer dependency "react@^17.0.0".
+npm 의 경우
+npm 3버전 까지는 피어 종속성을 자동으로 설치되었지만, 여러 문제가 있어서, 4버전부터 6버전 까지는 경고메시지만 띄워주었고, 7버전부터는 peer dependancy 버전이 맞지 않으면 패키지 설치가 안된다.
+
+
+
+npm@<=6 버전과 yarn의 경우 피어 의존성 버전과 설치된 의존성 버전이 서로 맞지 않아도 경고 메시지 외에는 설치에 크게 문제가 없긴 하지만, 어떠한 에러가 발생할지는 모른다. 경고 메시지에 따라 어떤 버전을 실제로 설치하게 될지는 개발자의 선택에 달려있다.
+
+YN0002 -MISSING_PEER_DEPENDENCY
+
+번들 종속성
+
+패키지의 bundledDependencies는 패키지를 게시할 때마다 번들로 제공되는 패키지 이름의 배열을 정의합니다.
+
+번들 종속성은 프로젝트 내부에 있어야 합니다. bundledDependencies 의 기능 은 기본적으로 일반 종속성과 동일합니다. 그들은 또한 yarn pack 을 실행할 때 포장될 것 입니다.
+
+일반 종속성은 일반적으로 npm 레지스트리에서 설치됩니다. 번들 종속성은 일반 종속성이 충분하지 않은 경우에 유용하며 다음과 같은 경우가 있습니다.
+
+npm 레지스트리에서 가져오지 않았거나 수정된 ​​타사 라이브러리를 재사용하려는 경우.
+자신의 프로젝트를 모듈로 재사용하려는 경우.
+모듈과 함께 일부 파일을 배포해야 할 때.
+
+
+
+----
+- https://velog.io/@johnyworld/Peer-Dependencies-%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC
+- https://yarnpkg.com/advanced/error-codes
+- https://www.w3resource.com/yarn/dependencies.php
