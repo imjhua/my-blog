@@ -8,6 +8,11 @@ const globalStyles = css`
   header > div:last-child > div {
     display: ${props => (props.resume ? 'block' : 'none')};
   }
+
+  /* View all tags 링크 숨김 */
+  a[href='/tags']{
+    display: none;
+  }
 `;
 
 export default globalStyles;

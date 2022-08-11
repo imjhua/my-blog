@@ -22,9 +22,17 @@ module.exports = {
       // See the theme's README for all available options
       options: {
         navigation: [
+          // {
+          //   title: `Blog`,
+          //   slug: `/blog`,
+          // },
           {
-            title: `Blog`,
-            slug: `/blog`,
+            title: `Posts`,
+            slug: `/tags/posts`,
+          },
+          {
+            title: `Remind`,
+            slug: `/remind`,
           },
           {
             title: `About`,
@@ -34,11 +42,11 @@ module.exports = {
         externalLinks: [
           {
             name: `Resume`,
-            url: `/resume`,
+            url: `/tags/resume`,
           },
           {
-            name: `Homepage`,
-            url: `https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Starter`,
+            name: `Tech`,
+            url: `/tags/tech`,
           },
         ],
       },
