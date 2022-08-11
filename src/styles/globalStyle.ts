@@ -9,7 +9,8 @@ const globalStyles = css`
     display: ${props => (props.resume ? 'block' : 'none')};
   }
 
-  /* View all tags 링크 숨김 */
+  /* blog 및 View all tags 링크 숨김 */
+  a[href='/blog'],
   a[href='/tags']{
     display: none;
   }
