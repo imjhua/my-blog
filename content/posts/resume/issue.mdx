@@ -12,21 +12,6 @@ tags: [resume]
 - 공통에러핸들러쪽에서 해당 에러에 대해서만 인증에러 처리를 하도록 함.
 
 
-export class InvalidAccessTokenError extends GenericCarnerError {
-  constructor() {
-    super('AccessToken값이 유효하지 않습니다.', 401)
-    this.name = 'InvalidAccessTokenError'
-  }
-}
-export class RequiredAccessTokenError extends GenericCarnerError {
-  constructor() {
-    super('AccessToken값을 필요로 합니다.', 401)
-    this.name = 'RequiredAccessTokenError'
-  }
-}
-
-
-
 ## 웹뷰내 스타일 미적용이슈 
 내비앱과 티앱, 두가지 애플리케이션에서 제공되는 웹뷰서비스내 스타일에 문제가 있다.
 - 각각의 호환성 버전이 달랐기에 함께 고려되어야 했다.
@@ -73,7 +58,6 @@ export class RequiredAccessTokenError extends GenericCarnerError {
 - mp4: 부드러운 영상. 앱(NativeApp Webview)에서 지원필요. 배터리저전력모드 별도 처리필요.
 
 
-
 ## 느린네트워크 환경에서 웹폰트로 지정된 텍스트가 늦게 노출됨
 디자인된 한글 웹폰트가 늦게 적용되어 텍스트 노출이 지연된다.
 - 웹폰트가 늦게 적용되는 원인들을 조사하고 하나씩 대응하며 테스트 진행.
@@ -81,7 +65,7 @@ export class RequiredAccessTokenError extends GenericCarnerError {
 - 최종적으로는 이미지 폰트를 활용하여 개선. 이때 웹접근성을 지원하도록 한다. 
 
 ## BFF 서버 아키텍처 공유 및 커뮤니케이션
-백엔드 API가 의도대로 동작하지 않아 문의를 하였는데,  초기 커뮤니케이션이 제대로 이루어지지 않았ㄱ다.
+백엔드 API가 의도대로 동작하지 않아 문의를 하였는데, 초기 커뮤니케이션이 제대로 이루어지지 않았ㄱ다.
 - 프론트서버 구성시 인증을 처리하는 별도 서버사이드를 구성한 상태였는데 커뮤니케이션 대상자와 개발환경에 대한 이해가 서로 다르다는 것을 깨달았다.
 - BFF로 구성된 서버 아키텍처를 공유하며 개발환경을 공유하였고 이에 문제원인을 파악하였고 문제를 해결할 수 있었다.
 
