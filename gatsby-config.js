@@ -68,7 +68,7 @@ module.exports = {
         short_name: `Lia blog`,
         description: `Lia's Tech blog`,
         start_url: `/`,
-        background_color: `none`,
+        background_color: `currentColor`,
         display: `standalone`,
         icons: [
           {
