@@ -26,13 +26,13 @@ const globalStyles = css`
     font-family: system-ui !important;
   }
 
-  ul{
+  ul, ol{
     padding-left: 24px !important;
     overflow: scroll !important;
   }
-  h1, h2, h3{
-    margin-top: 1rem;
-  }
+  /* h3, h4{
+    margin-top: 1rem !important;
+  } */
   h1{
     font-size: 1.5rem !important;
   }
@@ -44,6 +44,8 @@ const globalStyles = css`
   }
   h4{
     font-size: 1.0rem !important;
+    margin-top: 1.8rem !important;
+    margin-bottom: 0rem !important;
   }
 
   footer > div:last-child{

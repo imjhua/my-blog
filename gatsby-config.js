@@ -28,7 +28,11 @@ module.exports = {
           // },
           {
             title: `Posts`,
-            slug: `/tags/posts`,
+            slug: `/tags/tech`,
+          },
+          {
+            title: `Daily`,
+            slug: `/daily`,
           },
           {
             title: `Remind`,
