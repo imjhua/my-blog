@@ -30,16 +30,16 @@ module.exports = {
             slug: `/tags/tech`,
           },
           {
-            title: `Daily`,
-            slug: `/daily`,
-          },
-          {
             title: `Remind`,
             slug: `/remind`,
           },
           {
             title: `About`,
             slug: `/about`,
+          },
+          {
+            title: `Daily`,
+            slug: `/daily`,
           },
         ],
         externalLinks: [
