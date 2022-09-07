@@ -14,7 +14,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `@lekoarts/gatsby-theme-Lia-blog`,
+      resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
       options: {
         navigation: [
