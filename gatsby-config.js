@@ -1,23 +1,20 @@
-require(`dotenv`).config()
+require(`dotenv`).config();
 
-const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
 module.exports = {
   siteMetadata: {
-    // You can overwrite values here that are used for the SEO component
-    // You can also add new values here to query them like usual
-    // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/gatsby-config.js
     siteTitle: `Lia Blog`,
-    siteTitleAlt: `Lia Blog - Gatsby Theme`,
-    siteHeadline: `Lia Blog - Gatsby Theme from @lekoarts`,
-    siteUrl: `https://minimal-blog.lekoarts.de`,
-    siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
+    siteTitleAlt: `Lia Blog`,
+    siteHeadline: `Lia Blog`,
+    siteUrl: `https://imjhua.vercel.app/`,
+    siteDescription: `Lia's Tech Blog`,
     siteLanguage: `en`,
     siteImage: `/banner.jpg`,
     author: `@lekoarts_de`,
   },
   plugins: [
     {
-      resolve: `@lekoarts/gatsby-theme-minimal-blog`,
+      resolve: `@lekoarts/gatsby-theme-Lia-blog`,
       // See the theme's README for all available options
       options: {
         navigation: [
@@ -55,8 +52,6 @@ module.exports = {
       options: {
         enableListener: true,
         preconnect: [`https://fonts.gstatic.com`],
-        // If you plan on changing the font you'll also need to adjust the Theme UI config to edit the CSS
-        // See: https://github.com/LekoArts/gatsby-themes/tree/main/examples/minimal-blog#changing-your-fonts
         web: [
           {
             name: `IBM Plex Sans`,
@@ -69,14 +64,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        name: `Lia-blog`,
+        short_name: `Lia-blog`,
+        description: `Lia's Tech blog`,
         start_url: `/`,
-        background_color: `#fff`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#6B46C1`,
+        background_color: `none`,
         display: `standalone`,
         icons: [
           {
@@ -111,8 +103,8 @@ module.exports = {
           {
             serialize: ({ query: { site, allPost } }) =>
               allPost.nodes.map((post) => {
-                const url = site.siteMetadata.siteUrl + post.slug
-                const content = `<p>${post.excerpt}</p><div style="margin-top: 50px; font-style: italic;"><strong><a href="${url}">Keep reading</a>.</strong></div><br /> <br />`
+                const url = site.siteMetadata.siteUrl + post.slug;
+                const content = `<p>${post.excerpt}</p><div style="margin-top: 50px; font-style: italic;"><strong><a href="${url}">Keep reading</a>.</strong></div><br /> <br />`;
 
                 return {
                   title: post.title,
@@ -121,7 +113,7 @@ module.exports = {
                   url,
                   guid: url,
                   custom_elements: [{ "content:encoded": content }],
-                }
+                };
               }),
             query: `
               {
@@ -136,7 +128,7 @@ module.exports = {
               }
             `,
             output: `rss.xml`,
-            title: `Lia Blog - @lekoarts/gatsby-theme-minimal-blog`,
+            title: `Lia Blog`,
           },
         ],
       },
@@ -157,10 +149,10 @@ module.exports = {
         props: {
           theme: `src/styles/theme`,
           other: {
-            resume: false
-          }
-        }
+            resume: false,
+          },
+        },
       },
     },
   ].filter(Boolean),
-}
+};
