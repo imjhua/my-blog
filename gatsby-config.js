@@ -1,14 +1,5 @@
 require(`dotenv`).config()
-const path = require("path");
 
-const gatsbyRequiredRules = path.join(
-  process.cwd(),
-  "node_modules",
-  "gatsby",
-  "dist",
-  "utils",
-  "eslint-rules"
-);
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 module.exports = {
   siteMetadata: {
