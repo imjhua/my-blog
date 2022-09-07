@@ -69,7 +69,7 @@ module.exports = {
         description: `Lia's Tech blog`,
         start_url: `/`,
         background_color: `currentColor`,
-        display: `standalone`,
+        display: `fullscreen`,
         icons: [
           {
             src: `/android-chrome-192x192.png`,
