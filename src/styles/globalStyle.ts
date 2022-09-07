@@ -1,24 +1,7 @@
 import { css } from '@nfront/global-styles';
 
 const globalStyles = css`
-  @media (max-width: 720px) {  
-    pre{
-      display: none !important;
-    }
-  }
-  
-  html{
-    font-size: 14px !important;
-  }
-  header{
-    margin-bottom: 1rem !important;
-  }
-  main > section{
-    margin: 2rem 0 !important;
-  }
-  main > p{
-    display: none !important;
-  }
+  /* code theme */
   code{
     font-family: system-ui !important;
   }
@@ -26,14 +9,50 @@ const globalStyles = css`
     font-family: system-ui !important;
   }
 
+  /* date 영역 */
+  main > p,
+  main > section > div > p{
+    display: none !important;
+  }
+  main > section {
+    margin-top: 1.0rem !important;
+    margin-bottom: 3.4rem !important;
+  }
+  main > section > div {
+    margin-bottom: 0.6rem !important;
+  }
+  main > section > div > a{
+    margin-left: 4px;
+  }
+  main > section > div > a:before {
+    content:'-';
+    display: inline-block;
+    margin-right: 3px;
+  }
+
+  /* mobile */
+  @media (max-width: 720px) {  
+    pre{
+      display: none !important;
+    }
+  }
+  
+  /* layout */
+  html{
+    font-size: 16px !important;
+  }
+  header{
+    margin-bottom: 1rem !important;
+  }
   ul, ol{
     padding-left: 24px !important;
     overflow: scroll !important;
   }
-  /* h3, h4{
-    margin-top: 1rem !important;
-  } */
+  ul > li{
+    list-style: disc !important;
+  }
   h1{
+    text-transform: uppercase;
     font-size: 1.5rem !important;
   }
   h2{
@@ -48,18 +67,26 @@ const globalStyles = css`
     margin-bottom: 0rem !important;
   }
 
+  ul > li, p, a{
+    font-size: 1rem !important;
+  }
+
+
+  /* hidden */
+  main > section:nth-of-type(2) > div > a[href*='/resume']{
+    display: none !important;
+  }
+  header > div:last-child > div {
+    display: ${props => (props.resume ? 'block' : 'none')};
+  }
   footer > div:last-child{
     display: none;
   }
 
-  header > div:last-child > div {
-    display: ${props => (props.resume ? 'block' : 'none')};
-  }
-
-  /* blog 및 View all tags 링크 숨김 */
+  /* link */
   a[href='/blog'],
   a[href='/tags']{
-    display: none;
+    display: none !important;
   }
 `;
 

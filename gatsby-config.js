@@ -1,7 +1,15 @@
 require(`dotenv`).config()
+const path = require("path");
 
+const gatsbyRequiredRules = path.join(
+  process.cwd(),
+  "node_modules",
+  "gatsby",
+  "dist",
+  "utils",
+  "eslint-rules"
+);
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
-
 module.exports = {
   siteMetadata: {
     // You can overwrite values here that are used for the SEO component
@@ -47,10 +55,6 @@ module.exports = {
           {
             name: `Resume`,
             url: `/tags/resume`,
-          },
-          {
-            name: `Tech`,
-            url: `/tags/tech`,
           },
         ],
       },
