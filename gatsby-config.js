@@ -45,6 +45,10 @@ module.exports = {
             name: `Resume`,
             url: `/tags/resume`,
           },
+          {
+            name: `Login`,
+            url: `/login`,
+          },
         ],
       },
     },

@@ -35,6 +35,18 @@ const globalStyles = css`
       display: none !important;
     }
   }
+
+  @media (max-width: 420px) {  
+    html {
+      -moz-user-select: none;
+          user-select: none;
+      -webkit-user-select: none;
+      /* 롱터치 long touch 막기 */
+      -webkit-touch-callout: none;
+      /* touch 시 나오는 음영 제거 */
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+  }
   
   /* layout */
   html{
@@ -90,13 +102,14 @@ const globalStyles = css`
   }
 
   /* externalLinks */
-  main > section:nth-of-type(2) > div > a[href*='/resume']{
-    display: none !important;
-  }
-  header > div:last-child > div {
+  header > div:last-child > div > a[href*='/resume']{
     display: none;
   }
 
+  /* posts link */
+  main > section:nth-of-type(2) > div > a[href*='/resume']{
+    display: none !important;
+  }
   /* footer */
   footer > div:last-child{
     display: none;
