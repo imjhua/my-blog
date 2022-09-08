@@ -8,7 +8,7 @@ function Resume(){
   }
 
   return(
-    <Block onClick={handleButtonClick}>!</Block>
+    <Block onClick={handleButtonClick}>!!!!!</Block>
   )
 }
 

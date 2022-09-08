@@ -13,11 +13,6 @@ const globalStyles = css`
     font-family: system-ui !important;
   }
 
-  /* date 영역 */
-  main > p,
-  main > section > div > p{
-    display: none !important;
-  }
   main > section {
     margin-top: 1.0rem !important;
     margin-bottom: 3.4rem !important;
@@ -76,13 +71,25 @@ const globalStyles = css`
   }
 
 
-  /* hidden */
+  /* 
+    hidden 
+  */
+
+  /* date */
+  main > p,
+  main > section > div > p{
+    display: none !important;
+  }
+
+  /* externalLinks */
   main > section:nth-of-type(2) > div > a[href*='/resume']{
     display: none !important;
   }
   header > div:last-child > div {
-    display: ${props => (props.resume ? 'block' : 'none')};
+    display: none;
   }
+
+  /* footer */
   footer > div:last-child{
     display: none;
   }
