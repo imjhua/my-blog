@@ -1,6 +1,10 @@
 import { css } from '@nfront/global-styles';
 
 const globalStyles = css`
+  html {
+    scroll-behavior: smooth;
+  }
+  
   /* code theme */
   code{
     font-family: system-ui !important;
