@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import TableOfContents from "../components/TableOfContents";
 
-import Post from "@lekoarts/gatsby-theme-minimal-blog/src/components/Post"
+import Post from "@lekoarts/gatsby-theme-minimal-blog/src/components/post"
 
 export default function BlogPost({
   data: {
