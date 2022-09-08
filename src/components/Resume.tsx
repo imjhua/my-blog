@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from "react"
 
 function Resume(){
-  const [auth, setAuth] = useState(false)
+  const [mesaage, setMesaage] = useState('')
   useEffect(()=>{
     const password = prompt("Please enter your password.");
 
-    if (password === 'r') {
-      setAuth(true)
+    if (password === '890') {
       // const target = document.querySelector('header > div:last-child > div > a') as HTMLElement
       // target.style.setProperty('display', 'block', 'important');
       window.location.replace('/tags/resume')
     } else{
-      setAuth(false)
+      setMesaage('Invalid password.')
     }
   },[])
 
-  return auth ? null:<>Invalid password.</>
+  return <>{mesaage}</>
 }
 
 export default Resume
