@@ -24,7 +24,7 @@ const Button = styled.button`
 `
 const TocBlock = styled.div`
   position: fixed;
-  top: 120px;
+  top: 130px;
   right: 10px;
   /* opacity: 0.8; */
   z-index: 1;

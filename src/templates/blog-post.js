@@ -26,7 +26,11 @@ export default function BlogPost({
   )
 }
 
-/* SEE: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/src/components/post.tsx */
+/* 
+SEE: 
+- https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-minimal-blog-core
+- https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/src/components/post.tsx 
+*/
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {

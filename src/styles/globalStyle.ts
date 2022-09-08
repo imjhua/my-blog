@@ -7,10 +7,14 @@ const globalStyles = css`
   
   /* code theme */
   code{
+    margin-top: 14px !important;
     font-family: system-ui !important;
   }
+  .gatsby-highlight{
+    font-size: 15px !important;
+  }
   .gatsby-highlight pre:before {
-    font-family: system-ui !important;
+    /* font-family: system-ui !important; */
   }
 
   main > section {

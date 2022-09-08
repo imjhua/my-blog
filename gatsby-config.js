@@ -60,12 +60,23 @@ module.exports = {
             maxDepth: 6,
           },
           plugins: [
-          {
-            resolve: `gatsby-remark-autolink-headers`,
-            options: {
-              icon: false,
+            {
+              resolve: `gatsby-remark-autolink-headers`,
+              options: {
+                icon: false,
+              },
             },
-          },
+            `gatsby-remark-prismjs`
+            // {
+            //   resolve: `gatsby-remark-prismjs`,
+            //   options: {
+            //     classPrefix: "language-",
+            //     inlineCodeMarker: null,
+            //     aliases: {},
+            //     showLineNumbers: true,
+            //     noInlineHighlight: false,
+            //   },
+            // }
           ],
         },
     },

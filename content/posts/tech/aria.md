@@ -138,20 +138,19 @@ WAI-ARIA(Web Accessibility Initiative-Accessible Rich Internet Applications)는 
 
 ```html
 <body>
-  <div class="container" aria-hidden="true">// 보조기기가 무시하는 영역</div>
+  <div class="container" aria-hidden="true">보조기기가 무시하는 영역</div>
   <div
     role="alertdialog"
     aria-modal="true"
-    aria-labelledby="TITLE"
-    aria-describedby="DESCRIPTION"
+    aria-labelledby="title"
+    aria-describedby="description"
   >
-    <h2 id="TITLE">레진패스 안내</h2>
-    <p id="DESCRIPTION">
-      이 작품의 유료 에피소드 열람 시 자동으로 구매합니다. 레진패스를
-      적용하시겠습니까?
+    <h2 id="title">안내</h2>
+    <p id="description">
+      설명!
     </p>
-    <button type="button">레진패스 적용</button>
     <button type="button">취소</button>
+    <button type="button">확인</button>
   </div>
 </body>
 ```
@@ -185,12 +184,12 @@ WAI-ARIA(Web Accessibility Initiative-Accessible Rich Internet Applications)는 
 
 ```html
 <dt>
-  <button type="button" aria-controls="answer-99" aria-expanded="false">
-    보너스 코인은 언제 소진되나요?
+  <button type="button" aria-controls="answer-1" aria-expanded="false">
+    문의사항. 어떻게 할 수 있나요?
   </button>
 </dt>
-<dd id="answer-99" hidden>
-  <p>만료기한이 짧은 보너스 코인이 일반 코인보다 먼저 소진됩니다.</p>
+<dd id="answer-1" hidden>
+  <p>문의사항 답변</p>
 </dd>
 ```
 
@@ -205,8 +204,8 @@ WAI-ARIA(Web Accessibility Initiative-Accessible Rich Internet Applications)는 
   <h2>글로벌 네비게이션</h2>
   <ul>
     <li><a href="/home" aria-current="page">홈</a></li>
-    <li><a href="/ongoing">연재</a></li>
     <li><a href="/ranking">랭킹</a></li>
+    <li><a href="/my">나의페이지</a></li>
   </ul>
 </nav>
 ```
