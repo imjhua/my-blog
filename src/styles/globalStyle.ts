@@ -71,7 +71,7 @@ const globalStyles = css`
   }
 
   a {
-    color: var(--theme-ui-colors-text);
+    color: var(--theme-ui-colors-text) !important;
 
     text-decoration: none;
     &:-webkit-any-link{

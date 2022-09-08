@@ -42,7 +42,6 @@ const TocBlock = styled.div`
       }
       a {
         font-size: 0.8rem !important;
-        color: var(--theme-ui-colors-text);
       }
     }
   }
