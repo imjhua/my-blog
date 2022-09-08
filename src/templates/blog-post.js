@@ -14,7 +14,6 @@ export default function BlogPost({
   useEffect(()=>{
     const target = document.querySelector('#skip-nav')
     if(target){
-      console.log(target);
       target.innerHTML = html
     }
   },[html])

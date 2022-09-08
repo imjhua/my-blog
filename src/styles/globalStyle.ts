@@ -70,13 +70,21 @@ const globalStyles = css`
     font-size: 1rem !important;
   }
 
+  a {
+    color: var(--theme-ui-colors-text);
+
+    text-decoration: none;
+    &:-webkit-any-link{
+      text-decoration: none;
+    }
+  }
 
   /* 
     hidden 
   */
 
   /* date */
-  main > p,
+  /* main > p, */
   main > section > div > p{
     display: none !important;
   }
