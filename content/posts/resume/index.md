@@ -96,6 +96,35 @@ https://imjhua.github.io/blog
 
 ## 경력기술서(최근 순)
 
+잘된 경력기술서
+답은 없는것 같습니다. 하지만, 저가봤던 이력서중에 잘되어있는 예제를 보여드릴께요.
+
+프로젝명 / 프로젝트기간
+xx 프로젝트 / 2010.01 ~ 2010.09 (9개월)
+
+
+해당 프로젝트에서 기여한점
+xx middleware file io interface 구현
+kernel 최적화를 통한 부팅시간단축
+xx chip sound device driver porting, lvds camera interface
+양산관련 지원 (factory Mode Program, process)
+
+
+사용툴(언어,기술) 기재
+embedded linux kernel, devicedriver
+yocto, make, gcc
+c, c++
+ALM (jira)
+aging application
+
+
+결과물 (프로젝트 결과)
+xx middleware 를 xx에 납품, 상용화
+xx 에 탑재 xx 양산
+출처: https://xenolife.tistory.com/621 [살림하는 프로그래머:티스토리]
+
+
+
 ### 카카오모빌리티
 
 #### 보험 서비스 사용자 웹뷰 개발
