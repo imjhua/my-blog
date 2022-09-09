@@ -1,17 +1,18 @@
 ---
 date: 2022-09-07
-title: ARIA 접근성
-slug: /tech/aria
+title: 웹 접근성
+slug: /tech/web-accessibility
 tags: [tech]
 ---
-
-## ARIA 접근성이란?
-
-접근가능한 리치 인터넷 어플리케이션(Accessible Rich Internet Applications, ARIA)은 장애를 가진 사용자가 웹 콘텐츠와 웹 어플리케이션(특히 JavaScript를 사용하여 개발한 경우)에 더 쉽게 접근할 수 있는 방법을 정의하는 여러 특성을 말한다.
 
 ## WAI-ARIA
 
 WAI-ARIA(Web Accessibility Initiative-Accessible Rich Internet Applications)는 HTML의 접근성 문제를 보완하는 W3C 명세이다. WAI-ARIA는 HTML 요소에 role 또는 aria-\* 속성을 추가하여 콘텐츠의 역할(roles), 상태(states), 속성(properties) 정보를 보조기기에 제공한다.
+
+참고) ARIA이란?
+
+접근가능한 리치 인터넷 어플리케이션(Accessible Rich Internet Applications, ARIA)은 장애를 가진 사용자가 웹 콘텐츠와 웹 어플리케이션(특히 JavaScript를 사용하여 개발한 경우)에 더 쉽게 접근할 수 있는 방법을 정의하는 여러 특성을 말한다.
+
 
 ### 사용규칙
 

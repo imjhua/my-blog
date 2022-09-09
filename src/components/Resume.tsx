@@ -6,6 +6,7 @@ function Resume(){
     const password = prompt("Please enter your password.");
 
     if (password === '890') {
+      setMesaage('Check password....')
       // const target = document.querySelector('header > div:last-child > div > a') as HTMLElement
       // target.style.setProperty('display', 'block', 'important');
       window.location.replace('/tags/resume')

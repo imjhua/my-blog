@@ -6,15 +6,18 @@ const globalStyles = css`
   }
   
   /* code theme */
+  li > code{
+    padding: 0 !important;
+  }
   code{
-    margin-top: 14px !important;
     font-family: system-ui !important;
   }
   .gatsby-highlight{
     font-size: 15px !important;
   }
   .gatsby-highlight pre:before {
-    /* font-family: system-ui !important; */
+    right: 0 !important;
+    left: inherit !important;
   }
 
   main > section {
