@@ -6,9 +6,12 @@ const TableOfContents = ({ content }) => {
   const [full, setFull] = useState(false)
   const [open, setOpen] = useState(true)
   return (
-    <TocBlock full={full} onClick={()=>{setFull((state)=>(!state))}}>
-      <Button onClick={()=>{setOpen((state)=>(!state))}}>📎</Button>
-      {open && (<div
+    <TocBlock full={full} >
+      <Button onClick={()=>{
+        setOpen((state)=>(!state))
+        setFull(false)
+        }}>📎</Button>
+      {open && (<div onClick={()=>{setFull((state)=>(!state))}}
         dangerouslySetInnerHTML={{ __html: content }}
       />)}
     </TocBlock>
@@ -22,11 +25,14 @@ const Button = styled.button`
   background: none;
   border: none;
   float: right;
-  margin-top: -4px;
-  margin-right: -4px;
+  width: 30px;
+  height: 30px;
 `
 const TocBlock = styled.div<{full:boolean}>`
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
   position: fixed;
+  
   ${({full})=> full ?
     css`
       top: 0;
@@ -34,17 +40,19 @@ const TocBlock = styled.div<{full:boolean}>`
       left: 0;
       bottom: 0;
       max-width: 100vw;
+      max-height: 100vh;
     `
     :
     css`
       top: 160px;
       right: 10px;
       max-width: 80vw;
+      max-height: 70vh;
     `
   }
   z-index: 1;
   background-color: var(--theme-ui-colors-muted);
-  padding: 10px 10px 0;
+  padding: 10px;
   border-radius: 10px;
   ul {
     min-width: 40vw;

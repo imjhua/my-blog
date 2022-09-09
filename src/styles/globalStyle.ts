@@ -1,10 +1,23 @@
 import { css } from '@nfront/global-styles';
 
+/* TODO: eslint */
+/* TODO: global style saas */
+
 const globalStyles = css`
   html {
     scroll-behavior: smooth;
   }
   
+  button{
+    cursor: pointer;
+    border-radius: 10px;
+    transition: opacity 0s; 
+    opacity: 1;
+  }
+  button:active{
+    opacity: 0.7;
+  }
+
   /* code theme */
   li > code{
     padding: 0 !important;
@@ -37,7 +50,7 @@ const globalStyles = css`
   }
 
   /* mobile */
-  @media (max-width: 720px) {  
+  @media (max-width: 400px) {  
     pre{
       display: none !important;
     }
