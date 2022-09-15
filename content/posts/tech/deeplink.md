@@ -95,8 +95,6 @@ Safari의 경우, URI Scheme의 동작은 제한되어 있다.
 
 해결안으로는 디바이스 및 Safari 캐시를 삭제하여 (설정 > Safari > 방문 기록 및 웹 사이트 데이터 지우기) 오류를 제거할 수 있다. 
 
-###
-
 ---
 
 - https://www.airbridge.io/blog-ko/deeplink-101-for-marketers-and-developers
