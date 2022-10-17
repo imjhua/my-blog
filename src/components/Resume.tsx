@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 
 function Resume(){
   const [mesaage, setMesaage] = useState('')
-  useEffect(()=>{
+  const showPrompt = ()=>{
     const password = prompt("Please enter your password.");
 
     if (password === '890') {
@@ -13,9 +13,15 @@ function Resume(){
     } else{
       setMesaage('Invalid password.')
     }
-  },[])
+  }
 
-  return <>{mesaage}</>
+  useEffect(showPrompt,[])
+
+  return (
+    <>
+      {mesaage} <button onClick={showPrompt}>로그인 재시도</button>
+    </>
+  )
 }
 
 export default Resume

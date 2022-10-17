@@ -65,7 +65,7 @@ https://imjhua.github.io/blog
 ### 2021.01.04 ~ 현재 카카오모빌리티 공통플랫폼개발팀 웹프론트파트
 
 - 자동차관리서비스를 제공하는 파트너사 반응형 웹 서비스 환경 구축 및 개발 (Nextjs, Typescript, WebSocket)
-- 전기차 보조금 조회 & 보험 서비스 사용자 웹뷰 개발 (Nextjs, Typescript, react-query)
+- 전기차 보조금 조회 & 보험 서비스 사용자 웹뷰 개발 (Nextjs, Typescript, react-query, Storybook)
 - 서비스 가입(약관, 점유인증) 지원 및 외부 서비스 연동 (NativeApp DeepLink URL Scheme)
 - 카카오T앱 티포인트 카카오뱅크연동을 위한 마크업 제공 (Vue)
 
