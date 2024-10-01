@@ -540,6 +540,15 @@ Expo Go를 사용하면 복잡한 빌드 과정 없이도 실제 기기에서 �
 참고)
 - https://github.com/expo/fyi/blob/main/bumping-ios-build-number.md
 
+#### EAS 프로젝트 생성
+slug와 동일한 프로젝트를 생성한다.
+- https://expo.dev/accounts/idltapps/projects
+
+프로젝트를 생성 후 eas-cli 패키지를 설치 후 id 를 설정한다.
+```
+npm install --global eas-cli && npx create-expo-app ztb && cd ztb && eas init --id a60b5a13-20c9-4ef9-9582-37156f96ec77
+```
+
 #### esa 구성 및 빌드 실행
 
 Account를 생성후 프로젝트를 생성한다.
