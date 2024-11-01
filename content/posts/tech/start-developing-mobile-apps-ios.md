@@ -165,15 +165,44 @@ NativeWind를 사용하면 React Native 개발자들이 Tailwind CSS의 장점�
 
 
 #### 필요한 이미지 준비
-파비콘으로 아이콘을 제너레이션 할 수 있다
+파비콘으로 아이콘을 제너레이션 할 수 있다.
+webp 의 경우 빌드 에러가 발생할 수 있으니 png로!
 
 - 파비콘: 48 x 48 권장
 - 아이콘: 1024 x 1024 권장
 - 스플래쉬(세로형): 1536 x 2048
 
+
+```
+// webp 빌드 실패 로그
+- Creating native directory (./ios)
+✔ Created native directory
+- Updating package.json
+✔ Updated package.json
+- Running prebuild
+✖ Prebuild failed
+Error: [ios.dangerous]: withIosDangerousBaseMod: Unsupported MIME type: image/webp
+Error: [ios.dangerous]: withIosDangerousBaseMod: Unsupported MIME type: image/webp
+    at Jimp.throwError (/Users/expo/workingdir/build/node_modules/jimp-compact/dist/jimp.js:1:833)
+    at Jimp.parseBitmap (/Users/expo/workingdir/build/node_modules/jimp-compact/dist/jimp.js:1:125733)
+    at Jimp.parseBitmap (/Users/expo/workingdir/build/node_modules/jimp-compact/dist/jimp.js:1:8514)
+    at /Users/expo/workingdir/build/node_modules/jimp-compact/dist/jimp.js:1:7613
+    at FSReqCallback.readFileAfterClose [as oncomplete] (node:internal/fs/read_file_context:68:3)
+npx expo prebuild --no-install --platform ios exited with non-zero code: 1
+```
+
 참고)
+- svg 만들기: https://editsvgcode.com/
+- https://a11y.gitbook.io/graphics-aria/svg-graphics/svg-text
+- https://mediamodifier.com/svg-editor#
+- 파비콘: https://pgicons.abiro.com/
+- https://favicon.io/
+- https://www.favicon.cc/
+- https://favicon.io/emoji-favicons/
 - 이모지 조합하기: https://emoji.supply/kitchen/
 - 로고 요청: https://chatgpt.com/
+- https://www.istockphoto.com/kr/%EB%B2%A1%ED%84%B0/%EC%9B%8C%ED%84%B0-%EC%9B%A8%EC%9D%B4%EB%B8%8C-%EB%A1%9C%EA%B3%A0-%EC%9D%B4%EB%AF%B8%EC%A7%80-gm1293400499-387820659
+- https://favicon.io/logo-generator/
 - 아이콘생성: https://www.appicon.co/
 - 스플래쉬: https://apetools.webprofusion.com/
 - https://developer.apple.com/design/human-interface-guidelines/app-icons#app-top
@@ -501,6 +530,7 @@ text
 
 참고)
 - https://developer.apple.com/help/app-store-connect/reference/screenshot-specifications/
+- https://developer.apple.com/design/human-interface-guidelines/layout#Specifications
 
 #### 빌드를 위한 설정
 
@@ -540,18 +570,12 @@ Expo Go를 사용하면 복잡한 빌드 과정 없이도 실제 기기에서 �
 참고)
 - https://github.com/expo/fyi/blob/main/bumping-ios-build-number.md
 
-#### EAS 프로젝트 생성
-slug와 동일한 프로젝트를 생성한다.
-- https://expo.dev/accounts/idltapps/projects
 
-프로젝트를 생성 후 eas-cli 패키지를 설치 후 id 를 설정한다.
-```
-npm install --global eas-cli && npx create-expo-app ztb && cd ztb && eas init --id a60b5a13-20c9-4ef9-9582-37156f96ec77
-```
-
-#### esa 구성 및 빌드 실행
+#### esa 프로젝트 설정 및 빌드 실행
 
 Account를 생성후 프로젝트를 생성한다.
+slug와 동일한 프로젝트를 생성한다.
+
 - https://expo.dev/accounts/idlt/projects
 
 발급받은 프로젝트 id를 앱 설정에 추가한다.
